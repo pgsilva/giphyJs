@@ -124,3 +124,7 @@ body{background-color:#f1f1f2}
 .box6 .title,.box6 img,.box6:after{transition:all .35s ease 0s}
 @media only screen and (max-width:990px){.box5{margin-bottom:30px}
 }
+
+h3{
+ color: #fff;   
+}

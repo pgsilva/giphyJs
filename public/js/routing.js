@@ -8,7 +8,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             views: {
                 "body": {
                     templateUrl: '../views/gallery/gallery.html',
-                    controller: 'LoginController'
+                    controller: 'GalleryController'
                 },
                 "navbar": { templateUrl: '../views/navbar.html' }
             }

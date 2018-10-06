@@ -3,8 +3,8 @@
 (function () {
 
     angular.module('dojo')
-        .constant('spotify_global', {
-            id_pg: '22og6murnc5rns2z5bdwkpdqy'
+        .constant('giphy_global', {
+            id_giphy: 'AqG5zgNgUhf9Ol4usbp02w2VmRT8sXiG'
         });
 
 })();

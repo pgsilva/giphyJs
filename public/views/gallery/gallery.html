@@ -1,8 +1,8 @@
 <link href="../../css/galleryestilo.css" rel="stylesheet">
 <div class="container mt-40">
-    <form class=" chat-msg" ng-submit="enviar()">
+    <form class=" chat-msg" ng-submit="buscar()">
         <div class="input-group mb-3">
-            <input type="text" style="background-color: darkgray; color: #fff" class="form-control" ng-model="message.item" placeholder="..."
+            <input type="text" style="background-color: darkgray; color: #fff" class="form-control" ng-model="inputbusca" placeholder="..."
                 aria-label="..." aria-describedby="basic-addon2" required>
             <div class="input-group-append">
                 <button class="btn btn-primary" type="submit" ><i class="fa fa-search"
@@ -12,44 +12,19 @@
     </form>
     <h3 class="text-center">Tipo Google só que melhor ...</h3>
     <div class="row mt-30">
-        <div class="col-md-4 col-sm-6">
+        <div ng-repeat="gif in gifs" class="col-md-4 col-sm-6">
             <div class="box5">
-                <img src="http://bestjquery.com/tutorial/hover-effect/demo160/images/img-1.jpg" alt="">
+                <img ng-src="{{gif.images.downsized.url}}" alt="" type="gif">
                 <ul class="icon">
-                    <li><a href="#" class="fa fa-search"></a></li>
+                    <li><a href="" class="fa fa-search"></a></li>
                     <li><a href="#" class="fa fa-link"></a></li>
                 </ul>
                 <div class="box-content">
-                    <h3 class="title">Williamson</h3>
-                    <span class="post">Web Developer</span>
+                    <h3 class="title">{{gif.title}}</h3>
+                    <span class="post">{{gif.import_datetime | date: 'dd/MM/yyyy'}}</span>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <div class="box5">
-                <img src="http://bestjquery.com/tutorial/hover-effect/demo160/images/img-2.jpg" alt="">
-                <ul class="icon">
-                    <li><a href="#" class="fa fa-search"></a></li>
-                    <li><a href="#" class="fa fa-link"></a></li>
-                </ul>
-                <div class="box-content">
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <div class="box5">
-                <img src="http://bestjquery.com/tutorial/hover-effect/demo160/images/img-3.jpg" alt="">
-                <ul class="icon">
-                    <li><a href="#" class="fa fa-search"></a></li>
-                    <li><a href="#" class="fa fa-link"></a></li>
-                </ul>
-                <div class="box-content">
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                </div>
-            </div>
-        </div>
-    </div>
+        </div><br><br>
+       
+    </div><br>
 </div>

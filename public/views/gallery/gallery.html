@@ -1,16 +1,25 @@
 <link href="../../css/galleryestilo.css" rel="stylesheet">
-<div class="container mt-40">
+<div class="row" ng-if="loading">
+    <div class="container">
+        <div class="row text-center">
+            <div class="centered">
+                <div class="blob-1"></div>
+                <div class="blob-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-40" ng-if="!loading">
     <form class=" chat-msg" ng-submit="buscar()">
         <div class="input-group mb-3">
-            <input type="text" style="background-color: darkgray; color: #fff" class="form-control" ng-model="inputbusca" placeholder="..."
-                aria-label="..." aria-describedby="basic-addon2" required>
+            <input type="text" style="background-color: darkgray; color: #fff" class="form-control" ng-model="inputbusca"
+                placeholder="..." aria-label="..." aria-describedby="basic-addon2" required>
             <div class="input-group-append">
-                <button class="btn btn-primary" type="submit" ><i class="fa fa-search"
-                aria-hidden="true"></i> Buscar</button>
+                <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
             </div>
         </div>
     </form>
-    <h3 class="text-center">Tipo Google só que melhor ...</h3>
+    <h3 class="text-center">tipo Google só que melhor ...</h3>
     <div class="row mt-30">
         <div ng-repeat="gif in gifs" class="col-md-4 col-sm-6">
             <div class="box5">
@@ -25,6 +34,12 @@
                 </div>
             </div>
         </div>
-       
+
     </div><br>
+</div>
+<div class="footer">
+    <div class="container" ng-if="!loading">
+        <a ng-click="getTrending()"><i class="fa fa-cloud-download-alt fa-3x fa-fw"></i> <br> carregar + GIFs ...</a>
+        </span>
+    </div>
 </div>

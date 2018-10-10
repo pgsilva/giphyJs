@@ -9,33 +9,37 @@
         </div>
     </div>
 </div>
-<div class="container mt-40" ng-if="!loading">
+<div class="container mt-40">
     <form class=" chat-msg" ng-submit="buscar()">
         <div class="input-group mb-3">
             <input type="text" style="background-color: darkgray; color: #fff" class="form-control" ng-model="inputbusca"
                 placeholder="..." aria-label="..." aria-describedby="basic-addon2" required>
             <div class="input-group-append">
-                <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
+                <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                    Buscar</button>
             </div>
         </div>
     </form>
-    <h3 class="text-center">tipo Google só que melhor ...</h3>
-    <div class="row mt-30">
-        <div ng-repeat="gif in gifs" class="col-md-4 col-sm-6">
-            <div class="box5">
-                <img ng-src="{{gif.images.downsized.url}}" alt="" type="gif">
-                <ul class="icon">
-                    <li><a href="{{gif.url}}" class="fa fa-search" target="_blank"></a></li>
-                    <li><a href="#" class="fa fa-link"></a></li>
-                </ul>
-                <div class="box-content">
-                    <h3 class="title">{{gif.title}}</h3>
-                    <span class="post">{{gif.import_datetime | date: 'dd/MM/yyyy'}}</span>
+    <div ng-if="!loading">
+        <h3 class="text-center">tipo Google só que melhor ...</h3>
+        <div class="row mt-30" style="margin-bottom:90px">
+            <div ng-repeat="gif in gifs" class="col-md-4 col-sm-6">
+                <div class="box5">
+                    <img ng-src="{{gif.images.downsized.url}}" alt="" type="gif">
+                    <ul class="icon">
+                        <li><a href="{{gif.url}}" class="fa fa-search" target="_blank"></a></li>
+                        <li><a href="#" class="fa fa-link"></a></li>
+                    </ul>
+                    <div class="box-content">
+                        <h3 class="title">{{gif.title}}</h3>
+                        <span class="post">{{gif.import_datetime | date: 'dd/MM/yyyy'}}</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div><br>
+        </div><br>
+    </div>
+</div><br><br><br>
 </div>
 <div class="footer">
     <div class="container" ng-if="!loading">

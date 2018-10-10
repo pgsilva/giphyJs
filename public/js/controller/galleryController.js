@@ -30,7 +30,6 @@ angular.module('dojo').controller('GalleryController', function ($scope, $http, 
     };
 
     function getTrending() {
-
         $scope.gifs = [];
         for (i = $scope.cont; i < $scope.valida; i++) {
             if ($scope.gifsGlobal[i]) {
@@ -42,7 +41,6 @@ angular.module('dojo').controller('GalleryController', function ($scope, $http, 
     };
 
     function buscar() {
-
         $scope.loading = true;
         $scope.gifs = [];
 
@@ -51,7 +49,7 @@ angular.module('dojo').controller('GalleryController', function ($scope, $http, 
 
         var promise = $http.post('api/search', $scope.requestSearch);
         promise.then(function (res) {
-          
+            $scope.gifsGlobal = res.data.data;
             console.log(res);
             $scope.loading = false;
         }).catch(function (erro) {

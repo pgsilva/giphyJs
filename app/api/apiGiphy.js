@@ -10,7 +10,7 @@ api.getTrendingGifs = function (req, res) {
     var api_key = req.body.data;
 
     var options = {
-        url: 'https://api.giphy.com/v1/gifs/trending?api_key=' + api_key + '&limit=35&rating=G',
+        url: 'https://api.giphy.com/v1/gifs/trending?api_key=' + api_key + '&limit=350&rating=G',
         //headers: { 'Authorization': 'Bearer ' + access_token },
         json: true
     };
@@ -27,7 +27,7 @@ api.getSearchGifs = function (req, res) {
     var search = req.body.data.search;
 
     var options = {
-        url: 'https://api.giphy.com/v1/gifs/search?api_key=' + api_key + '&q=' + search + '&limit=35&offset=0&rating=G&lang=en',
+        url: 'https://api.giphy.com/v1/gifs/search?api_key=' + api_key + '&q=' + search + '&limit=350&offset=0&rating=G',
         //headers: { 'Authorization': 'Bearer ' + access_token },
         json: true
     };

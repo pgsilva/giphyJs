@@ -167,7 +167,6 @@ html {
       transition: 1s;
       -webkit-transition: 1s;
   }#preloader {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;

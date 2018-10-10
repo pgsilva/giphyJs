@@ -1,14 +1,5 @@
 <link href="../../css/galleryestilo.css" rel="stylesheet">
-<div class="row" ng-if="loading">
-    <div class="container">
-        <div class="row text-center">
-            <div class="centered">
-                <div class="blob-1"></div>
-                <div class="blob-2"></div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="container mt-40">
     <form class=" chat-msg" ng-submit="buscar()">
         <div class="input-group mb-3">
@@ -42,6 +33,11 @@
 </div><br><br><br>
 </div>
 <div class="footer">
+    <div class="row" ng-if="loading">
+        <div id="preloader">
+            <div id="loader"></div>
+        </div>
+    </div>
     <div class="container" ng-if="!loading">
         <a ng-click="getTrending()"><i class="fa fa-cloud-download-alt fa-3x fa-fw"></i> <br> carregar + GIFs ...</a>
         </span>
